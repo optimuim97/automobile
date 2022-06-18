@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Commande {% endblock %}
+
+{% block body %}
+<style>
+  .form-container{
+
+  }
+</style>
+
+<div>
+   <div class="form-container" enctype="multipart-data">
+      <form action="{{ path('app_create_order') }}">
+            <input type="text" name="title"/>
+            <input type="text" name="description"/>
+            <input type="file" name="image"/>
+
+      </form>
+   </div> 
+</div>
+{% endblock %}
